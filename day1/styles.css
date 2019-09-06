@@ -1,0 +1,86 @@
+body {
+    background: aqua;
+}
+
+.menu {
+    margin: 50px;
+    width: 60px;
+    height: 45px;
+    cursor: pointer;
+    position: relative;
+}
+
+.line-1, .line-2, .line-3{
+    width: 50px;
+    height: 5px;
+    background: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    box-shadow: 0 0 2px gray;
+}
+
+.line-2 {
+    top: 20px;
+}
+
+.line-3 {
+    top: 30px;
+}
+
+.menu:hover .line-1{
+    animation: topLine 2s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes topLine {
+    from {
+        top: 10px
+    }
+    50% {
+        top: 20px;
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+        top: 20px;
+    }
+}
+
+@keyframes bottomLine {
+    from {
+        top: 30px
+    }
+    50% {
+        top: 20px;
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(135deg);
+        top: 20px;
+    }
+}
+
+.menu:hover .line-3 {
+    animation: bottomLine 2s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes middleLine {
+    from,
+    50% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0.01;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.menu:hover .line-2 {
+    animation: middleLine 2s ease;
+    animation-fill-mode: forwards;
+}
