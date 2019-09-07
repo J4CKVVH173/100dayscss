@@ -10,7 +10,7 @@ body {
     position: relative;
 }
 
-.line-1, .line-2, .line-3{
+.line-1, .line-2, .line-3 {
     width: 50px;
     height: 5px;
     background: white;
@@ -29,8 +29,19 @@ body {
     top: 30px;
 }
 
-.menu:hover .line-1{
+
+.cross-line-1 {
     animation: topLine 2s ease;
+    animation-fill-mode: forwards;
+}
+
+.cross-line-1-rev {
+    animation: topLine-rev 2s ease;
+    animation-fill-mode: revert;
+}
+
+.cross-line-3-rev {
+    animation: bottomLine-rev 2s ease;
     animation-fill-mode: forwards;
 }
 
@@ -48,6 +59,20 @@ body {
     }
 }
 
+@keyframes topLine-rev {
+    from {
+        transform: rotate(45deg);
+        top: 20px;
+    }
+    50% {
+        top: 20px;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 10px;
+    }
+}
+
 @keyframes bottomLine {
     from {
         top: 30px
@@ -62,7 +87,21 @@ body {
     }
 }
 
-.menu:hover .line-3 {
+@keyframes bottomLine-rev {
+    from {
+        transform: rotate(135deg);
+        top: 20px;
+    }
+    50% {
+        top: 20px;
+        transform: rotate(0deg);
+    }
+    to {
+        top: 30px;
+    }
+}
+
+.cross-line-3 {
     animation: bottomLine 2s ease;
     animation-fill-mode: forwards;
 }
@@ -80,7 +119,28 @@ body {
     }
 }
 
-.menu:hover .line-2 {
+@keyframes middleLine-rev {
+    from{
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.01;
+    }
+    55% {
+        opacity: 1;
+    }
+}
+
+.hide-line-2 {
     animation: middleLine 2s ease;
     animation-fill-mode: forwards;
+}
+
+.hide-line-2-rev {
+    animation: middleLine-rev 2s ease;
+    animation-fill-mode: forwards;
+}
+
+.no-animation {
+    animation: none !important;
 }
