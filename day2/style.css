@@ -1,0 +1,186 @@
+body {
+    background: cornsilk;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: #1d1d1d;
+}
+
+.window {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: sun-rise 3s infinite linear;
+}
+
+
+@keyframes sun-rise {
+    from {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.sky {
+    background: #7DDFFC;
+    height: 100%;
+    position: relative;
+}
+
+.land {
+    position: absolute;
+    background: #F0DE75;
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+}
+
+.sun {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: yellow;
+    border-radius: 40px;
+    transform: translate(-50%, -50%);
+    animation: sun-set 3s infinite linear;
+}
+
+@keyframes sun-set {
+    from {
+        left: 0;
+        top: 25%;
+    }
+    25% {
+        left: 25%;
+        top: 15%;
+    }
+    30% {
+        left: 25%;
+        top: 15%;
+    }
+    45% {
+        top: 11%;
+    }
+    50% {
+        left: 45%;
+        top: 10%
+    }
+    55% {
+        top: 10%;
+    }
+    60% {
+        top: 11%;
+    }
+    75% {
+        top: 15%;
+    }
+    to {
+        left: 100%;
+        top: 25%;
+    }
+}
+
+.pyramid-left {
+    position: absolute;
+    left: 23%;
+    bottom: 100%;
+    border: 65px solid transparent;
+    border-bottom: 65px solid #868383;
+    width: 0;
+    height: 0;
+    transform: skewX(-20deg);
+    animation: pyramid-left-shadow 3s infinite linear;
+}
+
+.pyramid-right {
+    position: absolute;
+    border-bottom: 65px solid #F4F4F4;
+    border-right: 65px solid transparent;
+    left: 57%;
+    bottom: 100%;
+    transform: skewX(32deg);
+    animation: pyramid-right-shadow 3s infinite linear;
+}
+
+@keyframes pyramid-right-shadow {
+    from {
+        border-bottom: 65px solid #969393;
+    }
+    30% {
+        border-bottom: 65px solid #DDDADA;
+    }
+    35% {
+        border-bottom: 65px solid #DDDADA;
+    }
+    70% {
+        border-bottom: 65px solid #F4F4F4;
+    }
+}
+
+@keyframes pyramid-left-shadow {
+    from,
+    30% {
+        border-bottom: 65px solid #F4F4F4;
+    }
+    45% {
+        border-bottom: 65px solid #F4F4F4;
+    }
+    65% {
+        border-bottom: 65px solid #c7c4c4;
+    }
+    75% {
+        border-bottom: 65px solid #a8a5a5;
+    }
+}
+
+.shadow {
+    border: 96px solid transparent;
+    border-top: 55px solid gray;
+    position: absolute;
+    left: 14%;
+    animation: shadow-animation 3s infinite linear;
+    transform-origin: top;
+}
+
+@keyframes shadow-animation {
+    from {
+        transform: skewX(75deg);
+        border-top: 75px solid gray;
+    }
+    25% {
+        transform: skewX(65deg);
+        border-top: 35px solid gray;
+    }
+    30% {
+        transform: skewX(65deg);
+        border-top: 35px solid gray;
+    }
+    75% {
+        transform: skewX(-50deg);
+        border-top: 35px solid gray;
+    }
+    to {
+        transform: skewX(-75deg);
+        border-top: 75px solid gray;
+    }
+}
