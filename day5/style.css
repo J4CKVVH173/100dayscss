@@ -1,0 +1,139 @@
+body {
+    background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #786450;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.profile-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 300px;
+    height: 320px;
+    display: flex;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.notice {
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.info {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block {
+    max-height: 36%;
+    min-height: 33.3%;
+    background-color: #f5e8df;
+    transition: all 0.1s ease;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.block:nth-child(2) {
+    margin: 1px 0;
+}
+
+.block:hover {
+    background-color: #E1CFC2;
+}
+
+.block > p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.block p span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.circle-outer {
+    border: 1px solid #786450;
+    padding: 4px;
+    border-radius: 100px;
+    border-right-color: #fff;
+    transition: all 1.5s ease;
+    margin-top: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.circle-inside {
+    border: 1px solid #786450;
+    width: 80px;
+    height: 80px;
+    padding: 4px;
+    border-radius: 100px;
+    border-left-color: #fff;
+    transition: all 1.5s ease;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    transition: all 1.5s ease;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+}
+
+.circle-outer:hover {
+    transform: rotate(360deg);
+}
+
+.circle-outer:hover .circle-inside {
+    transform: rotate(-720deg);
+}
+
+.circle-inside:hover .avatar {
+    transform: rotate(360deg);
+}
+
+.user-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.user-info span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #786450;
+    border-radius: 15px;
+    color: #786450;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 25px;
+    margin-top: 20px;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #786450;
+    color: white;
+}
