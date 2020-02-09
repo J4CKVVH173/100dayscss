@@ -20,6 +20,7 @@ p {
     width: 500px;
     height: 500px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .panel {
@@ -32,6 +33,11 @@ p {
     transform: translate(-50%, -50%);
     box-shadow: 0 0 15px 0 #4a4a4a;
     overflow: hidden;
+    transition: all 1s ease;
+}
+
+.move-right {
+    transform: translateX(0) translateY(-50%);
 }
 
 .head {
@@ -73,13 +79,16 @@ p {
     border-radius: 15px;
     padding: 5px 10px;
     color: #7d6682;
-    opacity: 1;
     transition: all 0.5s ease;
+    opacity: 1;
+    visibility: visible;
 }
 
 .hide {
+    visibility: hidden;
     opacity: 0;
     width: 180px;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear, width 0.3s linear;
 }
 
 .menu-control {
