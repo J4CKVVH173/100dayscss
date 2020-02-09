@@ -5,6 +5,8 @@ function search() {
 }
 
 function extraPanel() {
-  const e = document.getElementById('panel');
-  e.classList.toggle('move-right');
+  const mainPanel = document.getElementById('panel');
+  const extraPane = document.getElementById('extra-panel');
+  mainPanel.classList.toggle('move-right');
+  extraPane.classList.toggle('move-left');
 }
