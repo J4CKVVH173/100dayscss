@@ -63,6 +63,25 @@ p {
     flex: 1;
 }
 
+.search-input {
+    font-size: 12px;
+    position: absolute;
+    width: 200px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: #7d6682;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.hide {
+    opacity: 0;
+    width: 180px;
+}
+
 .menu-control {
     width: 30px;
     position: relative;
